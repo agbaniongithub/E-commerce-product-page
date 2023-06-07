@@ -51,7 +51,7 @@ function App() {
           <div className='lg:hidden'>
             {products.map((item, index) => (
               <div key={index}className={slideIndex === index + 1 ? 'relative' : 'hidden'}>
-              <img onClick={() => setShowLightbox(true)}src={item.mainImage} alt="Selected Image" className=' cursor-pointer w-full lg:rounded-2xl'/>
+              <img onClick={() => setShowLightbox(true)}src={(item.mainImage)} alt="Selected Image" className=' cursor-pointer w-full lg:rounded-2xl'/>
               <ul className='lg:hidden'>
                 <li><button onClick={previousSlide}className="bg-white p-5 rounded-full shadow absolute left-4 top-1/2 -translate-y-1/2"><FaChevronLeft /></button></li>
                 <li><button onClick={nextSlide} className="bg-white p-5 rounded-full shadow absolute right-4 top-1/2 -translate-y-1/2"><FaChevronRight /></button></li>
@@ -77,7 +77,7 @@ function App() {
   durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
           <div className='flex flex-wrap items-center justify-between lg:flex-col lg:items-start lg:gap-2'>
             <ul className='flex items-center gap-5'>
-              <li className="text-2xl font-bold text-slate-900">${price}</li>
+              <li className="text-2xl font-bold text-slate-900">$125.00</li>
               <li className="inline-block px-2 py-1 text-sm font-bold tracking-wide text-orange-400 bg-orange-100 rounded shadow">50%</li>
             </ul>
               <p className="text-sm text-slate-600"><s>$250.00</s></p>
